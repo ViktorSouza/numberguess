@@ -1,41 +1,42 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="style.css" />
-    <link rel="stylesheet" href="switch.css" />
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
     <title>Document</title>
 </head>
+<body>  
+    <div class="main-box">
+    <div id="flex">
+        <h1>Reaction Time</h1>
+        <p>When the box above changes the color, click it faster than possible.</p>
+        <div id="color">
+            <p id="pan"><span id="tens">000</span><span id="ms">ms</span></p>
 
-<body>
-    <div id="box">
-        <div id="formulario">
-            <h2>Number Guessing</h1>
-            <form action="nada">
-                <div style="display: flex; align-items: center; justify-content: space-evenly; width: 100%;" id="dark-mode">
-                    <p style="font-weight: bold;">Dark theme:</p>
-                    <label class="switch" onchange="background()">
-                        <input type="checkbox" id="color">
-                        <span class="slider round"></span>
-                    </label>
-                </div>
-                <input type="number" class="input-number"  placeholder="Initial Value" id="inicial" />
-                <input type="number" class="input-number"  placeholder="Final Value" id="final" />
-                <input type="number" class="input-number"  placeholder="Your guessing" id="resposta" />
-            <div style="display: flex; justify-content: space-evenly; width: 200px;">
-                <input type="button" value="Start" onclick="start()" id="start1"/>
-                <input type="button" value="Answer" id="answer"/>
-            </div>
-            <p id="tentativas">Tries: </p>
-            <p id="respostadiv">Tips:</p>
-        </form>
+        </div>
+        <div id="colorsecond" class="colorsecond"></div>
+        <div>
+            <input type="button" value="START" id="startbutton">
+            <input type="button" value="STOP" id="stopbutton">
+            <input type="button" value="Reset Graphic" onclick="resetStorage(); stop()">
+        </div>
+    </div>
+    <div id="flex">
+        <h1>Statistics:</h1>
+        <p>Best time: <span id="best"></span>ms</p>
+        <p>Worst time: <span id="worst"></span>ms</p>
+        <p>Average: <span id="media"></span>ms</p>
+    </div>
+    <div class="chart-container">
+        <canvas id="myChart"></canvas>
     </div>
 </div>
-    <script src="game.js"></script>
-    <script src="theme.js"></script>
-</body>
 
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="graphic.js"></script>
+    <script src="script.js"></script>
+
+</body>
 </html>

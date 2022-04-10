@@ -1,89 +1,122 @@
 @import url('https://fonts.googleapis.com/css2?family=Nunito&display=swap');
-body {
-    background-color: rgb(10, 14, 29);
-    font-family: "Nunito", sans-serif;
-    color: rgb(49, 49, 49);
+:root{
+    --black: #121212;
+    --white: rgb(230, 230, 230);
+    --colorbox: #ffffff;
+    --cyan: rgb(15, 235, 235);
 }
-form{
-    width: 200px;
+
+body{
+    background: rgb(0, 0, 0);
+    color: var(--white);
+font-family: 'Nunito', sans-serif;
+margin: 0px;
+}
+h1{
+    margin: 10px;
+}
+
+#flex{
+    background-color: var(--black);
+    min-width: 400px;
+    border-radius: 20px;
+    padding: 10px;
+    margin-top: 5px;
+    margin-bottom: 10px;
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
+    justify-content: space-evenly;
 }
-#box {
-    width: 400px;
-    background-color: rgb(255, 255, 255);
-    border-radius: 30px;
-    max-height: 500px;
-    box-shadow: 0px 0px 20px rgba(230, 218, 218, 0.158);
-    padding: 10px;
+#color{
     display: flex;
-    align-items: center;
     justify-content: center;
-    position: absolute;
-    left: 50%;
-    top: 50%;
-    transform: translate(-50%, -50%);
-    transition: 500ms;
-    
+    align-items: center;
 }
-input {
-    font-family: "Nunito", sans-serif;
-    margin: 10px 0px 20px 0px;
-    padding: 10px;
+#color, .colorsecond{
+    background: var(--colorbox);
+    height: 450px;
     width: 100%;
-    border-radius: 1500px;
+    border-radius: 20px;
+    z-index: 1;
+}
+
+input{
+    font-family: 'Nunito', sans-serif;
+    background-color: var(--cyan);
     border: none;
-    background-color: rgb(255, 255, 255);
-    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.322);
+    padding: 10px 20px;
+    font-weight: bold;
+    border-radius: 10px;
     transition: 300ms;
-}
-input, h2, #tentativas, #respostadiv{
-animation:  animation 800ms backwards cubic-bezier(0.52, 0.01, 0.52, 1);
-}
-input:focus{
-    outline: none;
-}
-
-#inicial{animation-delay: 100ms;}
-#final{animation-delay: 250ms;}
-#resposta{animation-delay: 300ms;}
-#start1{animation-delay: 450ms;}
-#answer{animation-delay: 600ms;}
-#tentativa{animation-delay: 700ms;}
-#respostadiv{animation-delay: 800ms;}
-
-
-#tentativas, #respostadiv {
-    margin: 0px;
-    overflow: hidden;
-    font-weight: 800;
-}
-input[type="button"] {
-    background-color: rgb(35, 186, 212);
-    font-weight: 900;
-    border: none;
-    border-radius: 1500px;
-    box-shadow: none;
-    color: rgb(255, 255, 255);
-    margin: 10px 0px 20px 0px;
-    padding: 10px;
-    width: 70px;
+    margin: 10px;
+    z-index: 1;
 }
 input:hover{
-    transform: scale(1.04);
+    transform: scale(1.1);
+    background-color: rgb(0, 255, 255);
+    box-shadow: 0px 0px 10px rgba(0, 255, 255, 0.384);
+}
+.main-box{
+    display: grid;
+    grid-template-columns: 900px;
+    grid-template-rows: auto auto;
+    gap: 0px;
+    grid-auto-flow: row dense;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+    max-width: 1500px;
+    height: 80%;
+    margin: 0px auto;
+}
+#myChart{
+    background: var(--black);
+
+    border-radius: 20px;
+    
+}
+.chart-container{
+    grid-column: 2 2;
+    max-width: 100%;
+    max-height: 500px;
+    min-height: 500px;
 }
 
+#pan{
+    position: absolute;
+    font-size: 70PX;
+    color: #121212;
+    z-index: 3;
+    user-select: none;
+}
+#color:hover + .colorsecond{
+    animation: expandY 600ms cubic-bezier(0, 0.93, 0.5, 1) forwards;
+}
+.colorsecond{
 
-@keyframes animation {
+    position: absolute;
+    transform: translateY(29px);
+    z-index: 0 !important;
+    width: 0px;
+}
+
+@keyframes expandY{
     0%{
-        transform: scale(0);
-    }
-    50%{
-        transform: scale(1.04);
+        width: 300px;
     }
     100%{
-        transform: scale(1);
+        width: 100%;
+    }
+}
+.shake{
+    animation: shake 400ms forwards;
+}
+@keyframes shake{
+    0%, 20%, 40%, 60%, 80%, 100%{
+        transform: translateX(0px);
+    }
+    10%, 30%, 50%, 70%, 90%{
+        transform: translateX(10px);
     }
 }
