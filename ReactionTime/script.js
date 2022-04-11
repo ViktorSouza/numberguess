@@ -9,6 +9,7 @@ var timeOutStart;
 var spanBest = document.getElementById("best");
 var spanWorst = document.getElementById("worst");
 var spanMedia = document.getElementById("media");
+var randomNumber = random(700, 5000)
 
 var dateNow;
 
@@ -46,13 +47,14 @@ function updateInfos() {
 
 //function---------------
 function start1() {
+  randomNumber = random(700, 5000);
   console.log('Start')
   dateNow = Date.now();
   document.getElementById('tens').innerText = "000";
   document.getElementById('ms').innerText = "ms";
     document.getElementById("color").style = "background: red;";
     document.getElementById("colorsecond").style = "background: red;";
-    document.getElementById("startbutton").removeEventListener("click", start1);
+    document.getElementById("startbutton").removeEventListener("click", startGame);
     document.getElementById("stopbutton").addEventListener("click", stop);
     buttonStop.removeEventListener("click", start1);
   buttonStop.addEventListener("click", buttonClick);
@@ -69,7 +71,7 @@ function stop() {
   document.getElementById("stopbutton").removeEventListener("click", start1);
   document.getElementById("color").style = "background: auto;";
   document.getElementById("colorsecond").style = "background: auto;";
-  document.getElementById("startbutton").value = "RESTART";
+  document.getElementById("startbutton").value = "Restart";
   document.getElementById("tens").innerHTML = "000";
   document.getElementById("ms").innerHTML = "ms";
   console.log("stop");
@@ -77,7 +79,8 @@ function stop() {
 //function-------------
 function chanceRandom() {
 
-  chance = dateNow + random(1000, 5000);
+  chance = dateNow + randomNumber;
+  console.log(randomNumber)
   if (chance < Date.now()) {
     console.log(chance - dateNow);
     document.getElementById("color").style = "background: #00ff4c;";
@@ -121,6 +124,7 @@ function buttonClick() {
     document.getElementById("color").style = "background: red;";
     document.getElementById("colorsecond").style = "background: red;";
     buttonStop.classList.add("shake")
+    document.getElementById("startbutton").removeEventListener("click", start1);
     buttonStop.removeEventListener("click", buttonClick);
     buttonStop.addEventListener("click", start1);
   }
@@ -135,7 +139,7 @@ function startTimer() {
 
 
 function random(min, max) {
-  return Math.random() * (max - min) + min;
+  return Math.floor(Math.random() * (max - min) + min);
 }
 
 
@@ -161,14 +165,15 @@ if (localStorage.getItem("MediaReaction") === "[]") {
   spanMedia.innerHTML = media;
 }
 
-document.getElementById("startbutton").addEventListener("click", function () {
+document.getElementById("startbutton").addEventListener("click", startGame);
+
+
+
+function startGame(){
   buttonStop.addEventListener("click", buttonClick);
-  timeOutStart = setTimeout(start1, 1000);
+  timeOutStart = setTimeout(start1, 400);
   document.getElementById("color").style = "background: red;";
   document.getElementById("colorsecond").style = "background: red;";
   document.getElementById("startbutton").removeEventListener("click", start1);
   document.getElementById("stopbutton").addEventListener("click", stop);
-});
-
-
-
+}

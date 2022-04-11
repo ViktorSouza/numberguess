@@ -1,39 +1,44 @@
-@import url('https://fonts.googleapis.com/css2?family=Nunito&display=swap');
-:root{
+@import url("https://fonts.googleapis.com/css2?family=Nunito&display=swap");
+
+:root {
     --black: #121212;
     --white: rgb(230, 230, 230);
     --colorbox: #ffffff;
     --cyan: rgb(15, 235, 235);
+    --margindiv: 0.5rem;
 }
 
-body{
-    background: rgb(0, 0, 0);
+body {
+    background: rgb(9, 26, 63);
     color: var(--white);
-font-family: 'Nunito', sans-serif;
-margin: 0px;
+    font-family: "Nunito", sans-serif;
+    margin: 0px;
 }
-h1{
+
+h1 {
     margin: 10px;
 }
 
-#flex{
+#flex {
     background-color: var(--black);
     min-width: 400px;
     border-radius: 20px;
     padding: 10px;
-    margin-top: 5px;
-    margin-bottom: 10px;
+    margin-top: var(--margindiv);
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: space-evenly;
 }
-#color{
+
+#color {
     display: flex;
     justify-content: center;
     align-items: center;
 }
-#color, .colorsecond{
+
+#color,
+.colorsecond {
     background: var(--colorbox);
     height: 450px;
     width: 100%;
@@ -41,8 +46,8 @@ h1{
     z-index: 1;
 }
 
-input{
-    font-family: 'Nunito', sans-serif;
+input {
+    font-family: "Nunito", sans-serif;
     background-color: var(--cyan);
     border: none;
     padding: 10px 20px;
@@ -52,12 +57,14 @@ input{
     margin: 10px;
     z-index: 1;
 }
-input:hover{
+
+input:hover {
     transform: scale(1.1);
     background-color: rgb(0, 255, 255);
     box-shadow: 0px 0px 10px rgba(0, 255, 255, 0.384);
 }
-.main-box{
+
+.main-box {
     display: grid;
     grid-template-columns: 900px;
     grid-template-rows: auto auto;
@@ -70,53 +77,89 @@ input:hover{
     height: 80%;
     margin: 0px auto;
 }
-#myChart{
+
+#myChart {
     background: var(--black);
 
     border-radius: 20px;
-    
 }
-.chart-container{
-    grid-column: 2 2;
+
+.chart-container {
     max-width: 100%;
     max-height: 500px;
     min-height: 500px;
+    margin-top: var(--margindiv);
 }
 
-#pan{
+i {
+    margin-right: 10px;
+}
+
+.flex-row {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+#pan {
     position: absolute;
-    font-size: 70PX;
+    font-size: 70px;
     color: #121212;
     z-index: 3;
     user-select: none;
 }
-#color:hover + .colorsecond{
+
+#color:hover+.colorsecond {
     animation: expandY 600ms cubic-bezier(0, 0.93, 0.5, 1) forwards;
 }
-.colorsecond{
 
+.colorsecond {
     position: absolute;
-    transform: translateY(29px);
+    transform: translateY(38px);
     z-index: 0 !important;
     width: 0px;
 }
 
-@keyframes expandY{
-    0%{
+@keyframes expandY {
+    0% {
         width: 300px;
     }
-    100%{
+
+    100% {
         width: 100%;
     }
 }
-.shake{
+
+.shake {
     animation: shake 400ms forwards;
 }
-@keyframes shake{
-    0%, 20%, 40%, 60%, 80%, 100%{
+
+a{
+    text-decoration: underline;
+    color: var(--white);
+}
+a:hover{
+    text-decoration: none;
+    color: var(--white);
+}
+
+@keyframes shake {
+
+    0%,
+    20%,
+    40%,
+    60%,
+    80%,
+    100% {
         transform: translateX(0px);
     }
-    10%, 30%, 50%, 70%, 90%{
+
+    10%,
+    30%,
+    50%,
+    70%,
+    90% {
         transform: translateX(10px);
     }
 }

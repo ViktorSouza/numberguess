@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css">
     <link rel="stylesheet" href="style.css">
     <title>Document</title>
 </head>
@@ -11,15 +12,15 @@
     <div class="main-box">
     <div id="flex">
         <h1>Reaction Time</h1>
+        <small>By: Viktor</small>
         <p>When the box above changes the color, click it faster than possible.</p>
         <div id="color">
             <p id="pan"><span id="tens">000</span><span id="ms">ms</span></p>
-
         </div>
         <div id="colorsecond" class="colorsecond"></div>
         <div>
-            <input type="button" value="START" id="startbutton">
-            <input type="button" value="STOP" id="stopbutton">
+            <input type="button" value="Start" id="startbutton">
+            <input type="button" value="Stop" id="stopbutton">
             <input type="button" value="Reset Graphic" onclick="resetStorage(); stop()">
         </div>
     </div>
@@ -31,6 +32,36 @@
     </div>
     <div class="chart-container">
         <canvas id="myChart"></canvas>
+    </div>
+    <div id="flex" class="footer">
+        <p>Made by Viktor</p>
+        <ul>
+            <li>
+                <div class="flex-row">
+                    <i class="bi bi-instagram" ></i>
+                    <a href="http://instagram.com/viktor.dzn" target="_blank" rel="noopener noreferrer">
+                        <p>@viktor.dzn</p>
+                    </a>
+                </div>
+            </li>
+            <li>
+                <div class="flex-row">
+                    <i class="bi bi-facebook"></i>
+                    <a href="http://facebook.com/viktordzn" target="_blank" rel="noopener noreferrer">
+                        <p>@viktordzn </p>
+                    </a>
+                </div>
+            </li>
+            <li>
+                <div class="flex-row">
+                    <i class="bi bi-github"></i>
+                    <a href="https://github.com/ViktorSouza" target="_blank" rel="noopener noreferrer">
+                        <p>/ViktorSouza</p>
+                    </a>
+                </div>
+            </li>
+
+    </ul>
     </div>
 </div>
 
