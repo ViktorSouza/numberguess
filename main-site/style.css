@@ -10,7 +10,7 @@ body{
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
-    align-items: center;
+    align-items: flex-start;
     height: 80%;
 }
 .background-first{
@@ -27,7 +27,6 @@ a{
 }
 .first-part{
     color: rgb(255, 255, 255) !important;
-    height: 700px;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -60,7 +59,7 @@ ul{
     align-items: center;
 }
 .about-me{
-    width: 75%;
+    width: 100%;
     height: 100%;
     display: flex;
     flex-direction: column;
@@ -73,9 +72,10 @@ ul{
 }
 
 .projects{
-    width: 75%;
+    width: 100%;
     height: 100%;
-    display: flex;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, 340px);
     padding: 30px;
     box-sizing: border-box;
     margin: 0px;
@@ -109,5 +109,54 @@ ul{
     transform: scale(1.03);
     background: rgb(36, 41, 70);
     box-shadow: 0px 0px 20px rgba(36, 41, 70, 0.452);
+
+}
+
+@media screen and (max-width: 620px){
+    .background-first{
+        width: 100%;
+        height: 500px;
+    }
+    .first-part{
+        width: 95%;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        box-sizing: border-box;
+        height: 500px;
+        padding: 30px;
+        margin: 0px;
+        align-self: center;
+    }
+    ul{
+        list-style: none;
+        padding: 0px;
+        margin: 0px;
+        columns: 1;
+        order: 0;
+    }
+    li{
+        margin-bottom: 4px;
+    }
+    .sub-title{
+        font-size: 3vw;
+        order: -1;
+        font-weight: 100;
+    }
+    .high-size{
+        line-height: 65px;
+        font-size: 70px;
+        order: -2;
+        text-align: center;
+    }
+    .container{
+        width: 95%;
+    }
+    .about-me{
+        width: 95%;
+    }
+    .projects{
+        width: 95%;
+    }
 
 }
