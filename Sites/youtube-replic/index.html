@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" loading='lazy' />
+    <link rel="stylesheet" href="mini-styles.css" />
+    <link rel="stylesheet" href="switch.css">
+    <script src="https://kit.fontawesome.com/7cb2ad0903.js" crossorigin="anonymous"></script>
+    <script src="lorem-ipsum.js"></script>
+    <title>Document</title>
+
+</head>
+
+<body>
+    <header id="header">
+        <div class="container-nav">
+            <div id="first-part-nav">
+                <div id="logo" style="display: flex; align-items: center">
+                    <i class="fa-solid fa-bars" style="transform: scale(1.5); margin-right: 30px;"></i>
+                    <img src="logo-viktor.png" id="viktor-logo" alt="viktor-logo" />
+                    <p class="bold">Viktor</p>
+                </div>
+
+                <div style="display: flex; align-items: center; justify-content: space-evenly; width: 200px;"
+                    id="dark-mode">
+                    <p style="font-weight: bold;">Dark theme:</p>
+                    <label class="switch" onchange="background()">
+                        <input type="checkbox" id="color">
+                        <span class="slider round"></span>
+                    </label>
+                </div>
+            </div>
+            <div id="div-search">
+                <input id="input-search" placeholder="Search:" type="text" name="" id="" />
+                <i class="fa-solid fa-microphone" id="microphone"></i>
+            </div>
+            <div id="nav-more">
+                <svg class="svg-style" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                    class="bi bi-grid-3x3-gap" viewBox="0 0 16 16">
+                    <path
+                        d="M4 2v2H2V2h2zm1 12v-2a1 1 0 0 0-1-1H2a1 1 0 0 0-1 1v2a1 1 0 0 0 1 1h2a1 1 0 0 0 1-1zm0-5V7a1 1 0 0 0-1-1H2a1 1 0 0 0-1 1v2a1 1 0 0 0 1 1h2a1 1 0 0 0 1-1zm0-5V2a1 1 0 0 0-1-1H2a1 1 0 0 0-1 1v2a1 1 0 0 0 1 1h2a1 1 0 0 0 1-1zm5 10v-2a1 1 0 0 0-1-1H7a1 1 0 0 0-1 1v2a1 1 0 0 0 1 1h2a1 1 0 0 0 1-1zm0-5V7a1 1 0 0 0-1-1H7a1 1 0 0 0-1 1v2a1 1 0 0 0 1 1h2a1 1 0 0 0 1-1zm0-5V2a1 1 0 0 0-1-1H7a1 1 0 0 0-1 1v2a1 1 0 0 0 1 1h2a1 1 0 0 0 1-1zM9 2v2H7V2h2zm5 0v2h-2V2h2zM4 7v2H2V7h2zm5 0v2H7V7h2zm5 0h-2v2h2V7zM4 12v2H2v-2h2zm5 0v2H7v-2h2zm5 0v2h-2v-2h2zM12 1a1 1 0 0 0-1 1v2a1 1 0 0 0 1 1h2a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1h-2zm-1 6a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1v2a1 1 0 0 1-1 1h-2a1 1 0 0 1-1-1V7zm1 4a1 1 0 0 0-1 1v2a1 1 0 0 0 1 1h2a1 1 0 0 0 1-1v-2a1 1 0 0 0-1-1h-2z" />
+                </svg>
+                <svg class="svg-style" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                    class="bi bi-camera-video" viewBox="0 0 16 16">
+                    <path fill-rule="evenodd"
+                        d="M0 5a2 2 0 0 1 2-2h7.5a2 2 0 0 1 1.983 1.738l3.11-1.382A1 1 0 0 1 16 4.269v7.462a1 1 0 0 1-1.406.913l-3.111-1.382A2 2 0 0 1 9.5 13H2a2 2 0 0 1-2-2V5zm11.5 5.175 3.5 1.556V4.269l-3.5 1.556v4.35zM2 4a1 1 0 0 0-1 1v6a1 1 0 0 0 1 1h7.5a1 1 0 0 0 1-1V5a1 1 0 0 0-1-1H2z" />
+                </svg>
+                <svg class="svg-style" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                    class="bi bi-bell" viewBox="0 0 16 16">
+                    <path
+                        d="M8 16a2 2 0 0 0 2-2H6a2 2 0 0 0 2 2zM8 1.918l-.797.161A4.002 4.002 0 0 0 4 6c0 .628-.134 2.197-.459 3.742-.16.767-.376 1.566-.663 2.258h10.244c-.287-.692-.502-1.49-.663-2.258C12.134 8.197 12 6.628 12 6a4.002 4.002 0 0 0-3.203-3.92L8 1.917zM14.22 12c.223.447.481.801.78 1H1c.299-.199.557-.553.78-1C2.68 10.2 3 6.88 3 6c0-2.42 1.72-4.44 4.005-4.901a1 1 0 1 1 1.99 0A5.002 5.002 0 0 1 13 6c0 .88.32 4.2 1.22 6z" />
+                </svg>
+                <div class="circle" style="transform: scale(0.8);"></div>
+            </div>
+        </div>
+    </header>
+
+    <div id="main">
+        <div id="left-side">
+            <div id="video">
+                <video src="video.mp4" id="video-reprodution" autoplay loop></video>
+                <h2>Tapa lindo</h2>
+                <div id="video-info">
+                    <div style="width: 50%;">
+                        <p>1.056.525 views &#9679 january 6 of 2017</p>
+                    </div>
+                    <div class="video-info2">
+                        <div class="flex-info">
+                            <div>
+                                <i class="fa-regular fa-thumbs-up"></i>
+                                <p>13050</p>
+                            </div>
+                            <div>
+                                <i class="fa-regular fa-thumbs-down"></i>
+                                <p>0</p>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+                <div id="channel-info" style="flex-direction: column;">
+                    <div class="flex-row" style="justify-content: space-between; width: 100%;">
+                        <div class="flex-row">
+                            <div class="circle"></div>
+                            <p>Anony</p>
+                        </div>
+                        <div class="flex-row">
+                            <input type="button" id="subscribe" value="Subscribe">
+                        </div>
+                    </div>
+                    <div id="description-scroll">
+                        <div id="description">
+                            <p>Christmas House Phonk! Новогодний хаус фонк!</p>
+                            <p>My PHONK Radio 24/7 (Watch Stream on this channel)</p>
+                            <p>Submits/Contacts: IG: @cvrsedplaylist // cvrsedplaylist@gmail.com </p>
+                            <p>Christmas House Phonk! Новогодний хаус фонк!</p>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="comments">
+                <div id="comments-first-part">
+                    <div class="flex-comment">
+                        <p>1030 comments</p>
+                    </div>
+                    <div class="flex-comment">
+                        <div class="circle"></div>
+                        <input id="comment" style="font-weight: 100; font-size: 13px;"
+                            placeholder="Add a Comment"></input>
+
+                    </div>
+                </div>
+
+
+
+                <div id="comments-second-part">
+                </div>
+
+
+
+            </div>
+        </div>
+        <div id="right-side">
+            <h2>More videos:</h2>
+            <div id="video-template" style="visibility: hidden; position: fixed;">
+                <div class="videos-right">
+                    <div class="videos-left-part"></div>
+                    <div class="videos-right-part">
+                        <h3 class="zero-margin">Título</h3>
+                        <p class="gray-color zero-margin">Anony</p>
+                        <p class="gray-color zero-margin"><span class="views">200</span> views</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="suggests"></div>
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="flexbox">
+        <label for="number">Type the seconds:</label>
+        
+        <input type="number" name="numero" min="10" id="number" value="10" tabindex="1">
+        <div id="flexbuttons">
+            <input type="button" value="Count" id="count" tabindex="3">
+            <input type="button" value="Start" id="start" tabindex="2">
+        </div>  
+        <p id="timeremaning">Time Remaning: <span id="countdowntimer"></span></p>
+        <p id="count1">Counter: </p>
+        <p id="finalnumber">Your score: </p>
+        <p id="media">Media: </p>
+        <div style="height: 100%; width: 100%;">
+            <canvas id="myChart"></canvas>
+            
+        </div>
+    </div>
+        <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+        <script src="graphic.js"></script>
+        <script src="script.js"></script>
+</body>
+</html>

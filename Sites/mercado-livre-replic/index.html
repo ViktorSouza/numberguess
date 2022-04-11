@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="stylesheet" href="style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css">
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="mouse-pointer"></div>
+    <header>
+        <div id="greetings">
+            <div class="greetings-flex">
+                <i class="bi greetings-icon bi-person"></i>
+                <div class="greetings-text">
+                    <small>Hi João Vitkor!</small>
+                    <p>Nível 2 - Mercado Pontos</p>
+                </div>
+            </div>
+        </div>
+        <h1 style="margin: 0px 30px;">Início</h1>
+    </header>
+    <div class="flex">
+        <div id="flexleft">
+            <aside>
+                <nav>
+                    <div class="aside1">
+                        <div class="aside-options">
+                            <i class="bi bi-house"></i>
+                            <p>Início</p>
+                        </div>
+                        <div class="aside-options">
+                            <i class="bi bi-person"></i>
+                            <p>Seu perfil</p>
+                        </div>
+                        <div class="aside-options">
+                               <i class="bi bi-question-circle"></i>
+                            <p>Ajuda</p>
+                        </div>
+                    </div>
+                    <div class="aside1">
+                        <div class="aside-options">
+                            <i class="bi bi-coin"></i>
+                            <p>Seu dinheiro</p>
+                        </div>
+                        <div class="aside-options">
+                            <i class="bi bi-activity"></i>
+                            <p>Atividade</p>
+                        </div>
+                        <div class="aside-options">
+                            <i class="bi bi-wallet2"></i>
+                            <p>Open Finance</p>
+                        </div>
+                        <div class="aside-options">
+                            <i class="bi bi-send"></i>
+                            <p>Transferir dinheiro</p>
+                        </div>
+                    </div>
+                    <div class="aside1">
+                        <div class="aside-options">
+                            <i class="bi bi-save"></i>
+                            <p>Receber na sua loja</p>
+                        </div>
+                        <div class="aside-options">
+                            <i class="bi bi-link-45deg"></i>
+                            <p>Link de pagamento</p>
+                        </div>
+                        <div class="aside-options">
+                            <i class="bi bi-file-earmark-spreadsheet"></i>
+                            <p>Relatórios e faturamento</p>
+                        </div>
+                        <div class="aside-options">
+                            <i class="bi bi-pencil-square"></i>
+                            <p>Planos de assinatura</p>
+                        </div>
+                    </div>
+                    <div class="aside1">
+                        <div class="aside-options">
+                            <i class="bi bi-box-arrow-left"></i>
+                            <p>Sair </p>
+                        </div>
+                    </div>
+                </nav>
+            </aside>
+        </div>
+        <main>
+
+            <div class="grid">
+                <div id="grid-colum-left">
+                    <div class="leftgrid money">
+                        <p>Dinheiro rendendo disponível</p>
+                        <div class="flex-row">
+                            <strong style="font-size: 1.8em;">R$99,14</strong>
+                            <i class="bi small bi-caret-right"></i>
+                            
+                        </div>
+                        <hr style="margin: 20px 0px;">
+                        <div class="flex-row">
+                            <p style="font-size: 14px; font-weight: 200;">Adicione dinheiro e veja como rende: <mark>100% do
+                                    CDI</mark>
+                                <hr style="margin: 20px 0px;">
+                            <i class="bi small bi-caret-right"></i>
+                        </div>
+                        <div id="buttonsmoney" style="display: flex; justify-content: space-around;">
+                            <input type="button" value="Depositar">
+                            <input type="button" value="Transferir">
+                        </div>
+                    </div>
+
+                    <div class="leftgrid money">
+                        <div style="display: flex;
+                    flex-direction: row;
+                    justify-content: space-between;">
+                            <p style="margin: 0px; font-weight: 500;">Métricas</p>
+                            <button type="button">
+                                <span>Hoje</span>
+                            </button>
+                        </div>
+                        <hr>
+                        <p style="font-weight: 200;">Volume total de vendas:</p>
+                        <h2>99R$</h4>
+                            <div id="linhaflex">
+                                <p
+                                    style="margin: 0px 10px; background-color: rgb(106, 107, 107); padding: 2px 7px; border-radius: 9px; color: rgb(255, 255, 255);">
+                                    0%</p>
+                                <div id="linha"></div>
+                            </div>
+                            <hr style="margin: 20px 0px;">
+                            <div class="flex-row">
+                                <p style="color: var(--main-color-title); margin: 5px;">Ver todas</p>
+                                <i class="bi small bi-caret-right"></i>
+                            </div>
+                    </div>
+
+                    <div class="leftgrid money">
+                        <h2>Saiba Mais</h2>
+                    </div>
+
+                    <div class="leftgrid money">
+                        <small style="color: var(--main-color-title);">BAIXE O APP!</small>
+                        <h3 style="color: var(--main-color-title); text-transform: uppercase;">Pague suas contas sem sair de
+                            casa! :D</h3>
+                    </div>
+                </div>
+                <div id="grid-colum-right">
+
+                    <div class="rightgrid activity">
+                        <h3>Sua atividade</h3>
+                        <hr>
+                        <div class="search-div">
+                            <i class="bi search-icon bi-search"></i>
+                            <input type="text" placeholder="Pesquisar" id="search">
+                        </div>
+                        <ul id="ul-list">
+
+                        </ul>
+                    </div>
+                </div>
+            </div>
+    </div>
+    </main>
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>

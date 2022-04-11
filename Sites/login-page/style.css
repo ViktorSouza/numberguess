@@ -1,0 +1,128 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito&display=swap');
+body{
+    background-color: rgb(30, 31, 39);
+    font-family: 'Nunito', sans-serif;
+}
+img{
+width: 330px;
+height: fit-content;
+margin: 0px;
+grid-column: 1;
+animation: slide 1.5s cubic-bezier(0, 0.65, 0.29, 1);
+animation-delay: 300ms;
+animation-fill-mode: backwards;
+}
+.container > *{
+    user-select: none;
+}
+.container{
+    display: grid;
+    transform: scale(1.5);
+    margin: 15em auto;
+    border-radius: 30px;
+    grid-template-columns: 350px 250px;
+    background-color: rgb(255, 255, 255);
+    overflow: hidden;
+    width: 600px;
+    height: 400px;
+    padding: 10px;
+    align-items: center;
+    justify-content: flex-end;
+    justify-items: center;
+}
+.right{
+    display: flex;
+    flex-direction: column;
+    grid-column: 2;
+    align-items: flex-start;
+}
+#form{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+input:not(#button){
+    background-color: rgb(96 117 224);
+    border: none;
+    color: white;
+    margin: 10px 0px;
+    height: 30px;
+    width: 195px;
+    padding: 8px 8px 8px 18px;
+    border-radius: 50px;
+    font-family: 'Nunito', sans-serif;
+    transition: 500ms;
+}
+::-ms-reveal {
+    filter: invert(100%);
+  }
+input{
+box-shadow: 3px 3px 10px rgba(26, 32, 48, 0.363);
+}
+
+input:not(#button):focus{
+    outline: none;
+    transform: scale(1.03);
+}
+#button{
+    background-color: rgb(96 117 224);
+    border: none;
+    color: aliceblue;
+    margin: 10px 0px 2px 0px;
+    padding: 12px 14px;
+    border-radius: 50px;
+    box-shadow: 3px 3px 10px rgba(26, 32, 48, 0.096);
+    transition: 600ms;
+    cursor: pointer;
+}
+#button:hover{
+    transform: scale(1.1);
+    background-color: rgb(105, 125, 228);
+    box-shadow: 0px 0px 10px rgba(96, 117, 224, 0.637);
+}
+::placeholder{
+    color: rgb(244, 244, 252);
+}
+#crenow{
+    font-size: 16px;
+    font-weight: 600;
+    color: rgb(96 117 224);
+    text-decoration-line: underline;
+    cursor: pointer;
+    transition: 400ms;
+}
+p{
+    margin: 16px 0px 0px 0px;
+}
+#crenow:hover{
+    color: rgb(129, 146, 230);
+    transform: scale(1.21);
+}
+h1{
+    font-size: 36px;
+    animation: animationscale 1s cubic-bezier(0, 0.65, 0.29, 1) 100ms backwards;
+}
+input:not(#button){
+    animation: animationscale 1s cubic-bezier(0, 0.65, 0.29, 1) 400ms backwards;
+}
+#button{
+    animation: animationscale 1s cubic-bezier(0, 0.65, 0.29, 1) 600ms backwards;
+}
+@keyframes animationscale{
+    0%{
+        transform: scale(0);
+    }
+    100%{
+        transform: scale(1);
+    }
+}
+
+@keyframes slide {
+    0% {
+        transform: translateX(-100%) scale(0);
+        opacity: 0;
+    }
+    100% {
+        transform: translateX(0%);
+    }
+}

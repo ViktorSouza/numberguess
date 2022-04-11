@@ -1,0 +1,166 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.bold {
+    font-weight: bold;
+}
+
+.gray-color {
+    color: var(--gray-color);
+}
+
+.zero-margin {
+    margin: 0px;
+}
+
+#video-reprodution {
+    width: 100%;
+    height: 100%;
+}
+
+::placeholder {
+    color: var(--gray-color);
+    font-family: "Nunito";
+    font-size: 14px;
+}
+
+.circle {
+    background: linear-gradient(45deg, rgb(31, 204, 216), rgb(133, 26, 255));
+    min-width: 2.3rem;
+    min-height: 2.3rem;
+    max-width: 2.3rem;
+    max-height: 2.3rem;
+    border-radius: 50%;
+}
+
+.flex-comment * {
+    margin: 0px 10px 10px 0px;
+}
+
+.flex-comment p {
+    border-bottom: solid 1px var(--white50);
+    width: 100%;
+}
+
+.flex-comment {
+    display: flex;
+    align-items: center;
+}
+
+.flex-row {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 0px;
+}
+
+.flex-row * {
+    margin: 0px 10px 0px 0px;
+}
+
+#subscribe {
+    background: #f11616;
+    color: white;
+    border: none;
+    border-radius: var(--border-small);
+    padding: 5px 10px;
+    cursor: pointer;
+    transition: 400ms;
+}
+
+#subscribe:hover {
+    background: #ff4848;
+    box-shadow: 0px 0px 10px #ff484885;
+    transform: scale(1.05);
+}
+
+#description {
+    max-width: 45%;
+    margin-left: 40px;
+}
+
+#description-scroll {
+    max-height: 120px;
+    overflow-y: scroll;
+}
+
+input#comment {
+    background: none;
+    border: none;
+    border-bottom: solid 1px var(--white50);
+    color: white;
+    width: 100%;
+}
+
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-track {
+    border-radius: 100px;
+    background: #293035;
+}
+
+::-webkit-scrollbar-thumb {
+    border-radius: 100px;
+    background: rgb(31, 173, 184);
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: rgb(65, 195, 228);
+}
+
+.medium-font {
+    font-size: 16px;
+}
+
+.small-font {
+    font-size: 12px;
+}
+
+.flex-info {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 0px;
+    justify-content: space-around;
+    width: 200px;
+}
+
+.video-info2 {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 0px;
+    justify-content: space-around;
+    justify-content: space-between;
+}
+
+.flex-info div {
+    display: flex;
+    align-items: center;
+    margin: 5px;
+}
+
+.flex-info p,
+i {
+    margin: 5px;
+}
+
+.svg-style {
+    transform: scale(1.5);
+    margin: 0px 7px;
+}
+
+.videos-right,
+#video,
+header,
+#comments-first-part,
+#comments-second-part,
+.comment,
+#right-side {
+    box-shadow: 0px 0px 20px rgba(17, 67, 73, 0.116);
+    transition: 400ms !important;
+}

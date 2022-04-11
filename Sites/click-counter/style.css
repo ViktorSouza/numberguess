@@ -1,0 +1,62 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito&display=swap');
+body {
+    background-color: rgb(0, 0, 0);
+    font-family: 'Nunito', sans-serif;
+    font-size: 20px;
+    color: aliceblue;
+}
+p{
+    margin: 5px;
+}
+.flexbox {
+    background-color: #121212;
+    width: 1000px;
+    height: 800px;
+    margin: 20px auto;
+    padding: 10px;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    border-radius: 20px;
+    border: 2px solid cyan;
+}
+input {
+    font-family: 'Nunito', sans-serif;
+    text-align: center;
+    font-size: 20px;
+    border: none;
+    border: 0px solid rgba(26, 203, 209, 0.247);
+    margin: 10px;
+    padding: 10px;
+    transition-duration: 500ms;
+    transition-timing-function: ease;
+    border-radius: 20px;
+    position: relative;
+    background-color: #202022;
+    color: aliceblue;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.322);
+    transform: scale(1);
+}
+[type="button"]:hover{
+    background-color: rgb(31, 197, 209);
+    color: rgb(0, 0, 0);
+    box-shadow: 0px 0px 10px rgba(31, 197, 209, 0.534);
+    transform: scale(1.1);
+}
+[type="number"]:hover{
+    background-color: rgba(49, 49, 49, 0.658);
+    color: white;
+}
+[type="number"]:focus{
+    background-color: rgba(53, 69, 85, 0.781);
+    outline-width: 0;
+
+}       
+#myChart{
+    background: #15141a;
+    padding: 10px;
+    border-radius: 10px;
+    border: solid 1px rgb(0, 255, 255);
+}
+
+  
