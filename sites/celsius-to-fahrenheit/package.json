@@ -2,7 +2,7 @@
 	"name": "celsius-to-fahrenheit",
 	"version": "0.1.0",
 	"private": true,
-	"homepage": "http://mywebsite.com/relativepath",
+	"homepage": "https://viktorsouza.github.io/sites/celsius-to-fahrenheit/",
 	"dependencies": {
 		"@testing-library/jest-dom": "^5.16.4",
 		"@testing-library/react": "^13.2.0",
